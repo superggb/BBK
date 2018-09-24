@@ -32,17 +32,8 @@ App({
         }
       }
     })
-    wx.request({
-      url: 'https://www.superggb.cn/seckill/seckill/time/now',
-      method: 'get',
-      success: function (res) {
-        console.log(res.data);
-      }
-    })
-
   },
   globalData: {
     userInfo: null
-  },
-
+  }
 })

@@ -4,16 +4,16 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.98",
-	"appid": "wx32db12913c355ae0",
-	"projectname": "%E5%B8%AE%E5%B8%AE%E5%BF%AB",
+	"libVersion": "2.2.3",
+	"appid": "wxb39b4e043f3e577f",
+	"projectname": "bbk",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
