@@ -25,7 +25,7 @@
     "box-shadow": "0 0 6px 0",
     "list": [
       {
-        "pagePath": "pages/dqorder/index",
+        "pagePath": "pages/order_list/order_list",
         "iconPath": "images/nav/dqorder-off.png",
         "selectedIconPath": "images/nav/dqorder-on.png",
         "text": "代取"

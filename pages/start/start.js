@@ -8,10 +8,11 @@ Page({
     userInfo: {}
   },
   goToIndex: function () {
+    console.log(wx.getStorageSync('skey'));
     if (wx.getStorageSync('skey') > 0) {
       if (wx.getStorageSync('result') == 1 || wx.getStorageSync('firstLogin') == '1') {
         wx.switchTab({
-          url: '/pages/dqorder/index',
+          url: '/pages/order_list/order_list',
         });
       }
       else if (wx.getStorageSync('result') == 0) {
