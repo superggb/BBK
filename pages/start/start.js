@@ -9,16 +9,19 @@ Page({
   },
   goToIndex: function () {
     if (wx.getStorageSync('skey') > 0) {
-      if (wx.getStorageSync('result') == 1) {
+      if (wx.getStorageSync('result') == 1 || wx.getStorageSync('firstLogin') == '1') {
         wx.switchTab({
           url: '/pages/dqorder/index',
         });
       }
-      else if (wx.getStorageSync('result') == 0){
+      else if (wx.getStorageSync('result') == 0) {
         wx.navigateTo({
           url: "/pages/login/login"
         });
       } 
+      else if (wx.getStorageSync('result') == -1) {
+        return ;
+      }
     }
   },
   onLoad: function () {

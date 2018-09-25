@@ -12,7 +12,8 @@
         <image class="wave wave-bg" src="/images/more/wave.png" mode="aspectFill"></image>
       </view>
       <view class="bd">
-         <image class="smalltitle" src="/images/more/confirm-word1.png"></image>
+        <image class="smalltitle" src="/images/more/confirm-word1.png"></image>
+        <text class="userinfo-nickname">嗨 {{userInfo.nickName}}</text>
         <view class="confirm-btn" bindtap='goToIndex'>
           <text >进入</text>
         </view>

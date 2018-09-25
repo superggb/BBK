@@ -94,6 +94,12 @@ page{
   height: 200rpx;
   transition: all .35s ease;
 }
+
+.userinfo-nickname {
+  text-align: center;
+  color: #636363;
+}
+
 .logo {
   position: absolute;
   z-index: 2;

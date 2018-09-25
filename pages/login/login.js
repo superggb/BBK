@@ -12,6 +12,7 @@ Page({
     skey: wx.getStorageInfoSync('skey'), //读取缓存中的skey
     address: '',//宿舍地址
     stunumber: 0,//默认学号
+    password: '',//密码
     success: false,
     state: '',
   },
@@ -121,6 +122,7 @@ Page({
       var phone = that.data.phone;
       var address = that.data.address;
       var stunumber = that.data.stunumber;
+      var password = that.data.NewChanges;
       wx.request({
         url: 'http://221h58z433.imwork.net/userInfo',
         method: "POST",
@@ -128,21 +130,34 @@ Page({
           id: skey,
           phone: phone,
           address: address,
-          stunumber: stunumber
+          stunumber: stunumber,
+          password: password
         },
         header: {
           "content-type": "application/x-www-form-urlencoded"
         },
         success: function (res) {
-          wx.showToast({
-            title: '提交成功~',
-            icon: 'loading',
-            duration: 2000
-          })
-          console.log(res.data)
-          that.setData({
-            success: true
-          })
+          console.log(res.data);
+          wx.setStorageSync('firstLogin', res.data);//第一次认证后进入主页面
+          if (res.data == '1') {
+            wx.showToast({
+              title: '验证成功',
+              icon: 'loading',
+              duration: 2000
+            });
+            that.setData({
+              success: true
+            });
+          } else if (res.data == '0') {
+            wx.showToast({
+              title: '学号或密码错误',
+              icon: 'loading',
+              duration: 2000
+            });
+            that.setData({
+              success: false
+            })
+          }         
         }
       })
     }
