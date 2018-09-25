@@ -1,0 +1,35 @@
+<view class="container">
+  <view>
+    <view>
+      <text>发单者手机号：</text>
+      <text>{{order_item_data.pphone}}</text>
+    </view>
+    <view>
+      <text>物品类型：</text>
+      <text>{{order_item_data.type}}</text>
+    </view>
+    <view>
+      <text>赏金：</text>
+      <text>{{order_item_data.fee}}</text>
+    </view>
+    <view>
+      <text>送货地址：</text>
+      <text>{{order_item_data.sendAddress}}</text>
+    </view>
+    <view>
+      <text>取件地址：</text>
+      <text>{{order_item_data.acceptAddress}}</text>
+    </view>
+    <view>
+      <text>发布时间：</text>
+      <text>{{order_item_data.ptime}}</text>
+    </view>
+    <view>
+      <text>备注：</text>
+      <text>{{order_item_data.remark}}</text>
+    </view>
+  </view>
+  <view class="accept_btn">
+    <button bindtap="acceptTask">接受订单</button>
+  </view>
+</view>

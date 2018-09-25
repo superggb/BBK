@@ -7,7 +7,9 @@
     "pages/login/login",
     "pages/dqorder/index",
     "pages/djorder/index",
-    "pages/my/index"
+    "pages/my/index",
+    "pages/order_list/order_list",
+    "pages/order_detail/order_detail"
   ],
   "window":{
     "backgroundTextStyle":"light",
