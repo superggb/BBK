@@ -1,66 +1,87 @@
 // pages/my/index.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    userHeaderUrl: "../../images/useravatar.png",
+    optionNamas: ['我的订单', '我的优惠', '快递查询', '收货地址', '设置', '关于我们'],
+    optionIcons: ['../../images/my/mine_1.png', '../../images/my/mine_2.png', '../../images/my/mine_3.png', '../../images/my/mine_4.png', '../../images/my/mine_5.png', '../../images/my/mine_6.png',]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-  
-  },
+    // 页面初始化 options为页面跳转所带来的参数
+    this.setData({
+      userInfo: app.globalData.userInfo,
+      hasUserInfo: true
+    })
+    console.log(userInfo.avatarUrl)
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
+  },
   onReady: function () {
-  
-  },
+    // 页面渲染完成
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
+  },
   onShow: function () {
-  
-  },
+    // 页面显示
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
+  },
   onHide: function () {
-  
-  },
+    // 页面隐藏
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
+  },
   onUnload: function () {
-  
-  },
+    // 页面关闭
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
+  makePhone: function () {
+    wx.showModal({
+      title: "提示",
+      content: "你将使用运营商拨打电话1008611",
+      success: function (res) {
+        if (res.confirm) {
+          wx.makePhoneCall({
+            phoneNumber: '1008611'
+          })
+        }
+      }
+    })
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  selectoption: function (event) {
+    console.log(event)
+    let index = event.currentTarget.dataset.index
+    switch (parseInt(index)) {
+      case 0:
+        this.navigationTo("order", '')
+        break;
+      case 1:
+        this.navigationTo("coupon", '')
+        break;
+      case 2:
+        this.navigationTo("ecard", '')
+        break;
+      case 3:
+        this.navigationTo("address", '')
+        break;
+      case 4:
+        this.navigationTo("setting", '')
+        break;
+      case 5:
+        this.navigationTo("aboutus", '')
+        break;
+      default:
+        break;
+    }
+  },
+  navigationTo: function (pageName, params) {
+    console.log('跳转' + '../' + pageName + '/' + pageName + params)
+    wx.navigateTo({
+      url: '../' + pageName + '/' + pageName + params,
+      success: function (res) {
+        // success
+      },
+      fail: function () {
+        // fail
+      },
+      complete: function () {
+        // complete
+      }
+    })
   }
 })
