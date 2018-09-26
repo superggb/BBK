@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/start/start",
     "pages/index/index",
     "pages/logs/logs",
@@ -8,14 +8,16 @@
     "pages/dqorder/index",
     "pages/djorder/index",
     "pages/my/index",
+    "pages/my/trace/trace",
+    "pages/my/trace/detail/detail",
     "pages/order_list/order_list",
     "pages/order_detail/order_detail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "BBK",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#6e6d6b",

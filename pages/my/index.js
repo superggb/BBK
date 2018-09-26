@@ -7,11 +7,6 @@ Page({
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
-    this.setData({
-      userInfo: app.globalData.userInfo,
-      hasUserInfo: true
-    })
-    console.log(userInfo.avatarUrl)
 
   },
   onReady: function () {
@@ -54,7 +49,7 @@ Page({
         this.navigationTo("coupon", '')
         break;
       case 2:
-        this.navigationTo("ecard", '')
+        this.navigationTo("trace", '')
         break;
       case 3:
         this.navigationTo("address", '')
@@ -72,7 +67,7 @@ Page({
   navigationTo: function (pageName, params) {
     console.log('跳转' + '../' + pageName + '/' + pageName + params)
     wx.navigateTo({
-      url: '../' + pageName + '/' + pageName + params,
+      url: '../my/' + pageName + '/' + pageName + params,
       success: function (res) {
         // success
       },
