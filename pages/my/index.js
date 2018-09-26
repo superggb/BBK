@@ -2,7 +2,7 @@
 Page({
   data: {
     userHeaderUrl: "../../images/useravatar.png",
-    optionNamas: ['我的订单', '我的优惠', '快递查询', '收货地址', '设置', '关于我们'],
+    optionNamas: ['我的订单', '我的优惠', '快递查询', '收货地址', '手机号码', '关于我们'],
     optionIcons: ['../../images/my/mine_1.png', '../../images/my/mine_2.png', '../../images/my/mine_3.png', '../../images/my/mine_4.png', '../../images/my/mine_5.png', '../../images/my/mine_6.png',]
   },
   onLoad: function (options) {
@@ -58,7 +58,7 @@ Page({
         this.navigationTo("setting", '')
         break;
       case 5:
-        this.navigationTo("aboutus", '')
+        this.navigationTo("about", '')
         break;
       default:
         break;

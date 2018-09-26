@@ -43,5 +43,10 @@ Page({
         })
       }
     })
+  },
+  addorder: function () {
+    wx.navigateTo({
+      url: '../'
+    })
   }
 })

@@ -8,6 +8,7 @@
     "pages/dqorder/index",
     "pages/djorder/index",
     "pages/my/index",
+    "pages/my/about/about",
     "pages/my/trace/trace",
     "pages/my/trace/detail/detail",
     "pages/order_list/order_list",

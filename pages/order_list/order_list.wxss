@@ -12,3 +12,14 @@
   height: 45rpx;
   margin-right: 5rpx;
 }
+
+.add-view{
+    position: fixed;
+    bottom: 5rpx;
+    right: 30rpx;
+    z-index: 1000;
+}
+.add-view image{
+    width: 110rpx;
+    height: 110rpx;
+}

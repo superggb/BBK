@@ -113,6 +113,7 @@ Page({
     let eBusinessID = "1386025";
     let requestType = "1002";
     let dataSign = Base64.encode(MD5(requestData + appKey));
+    console.log(requestData);
     console.log(dataSign);
 
     wx.request({
@@ -156,13 +157,12 @@ Page({
               "name": ShipperName,
               "code": ShipperCode,
             })
-
             wx.setStorage({
               key: "historySearchList",
               data: newList,
               success: function () {
                 wx.navigateTo({
-                  url: 'detail/detail?LogisticCode=' + LogisticCode + '&ShipperCode=' + ShipperCode + '&ShipperName=' + ShipperName
+                  url: 'detail/detail?LogisticCode=' + LogisticCode + '&ShipperCode=' + ShipperName + '&ShipperName=' + ShipperName
                 })
               }
             })
@@ -245,7 +245,7 @@ Page({
 
   showDetail: function (event) {
     wx.navigateTo({
-      url: '../detail/detail?LogisticCode=' + event.currentTarget.dataset.order + '&ShipperCode=' + event.currentTarget.dataset.code + '&ShipperName=' + event.currentTarget.dataset.name
+      url: 'detail/detail?LogisticCode=' + event.currentTarget.dataset.order + '&ShipperCode=' + event.currentTarget.dataset.name + '&ShipperName=' + event.currentTarget.dataset.name
     })
   }
 })
