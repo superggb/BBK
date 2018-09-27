@@ -38,9 +38,17 @@ Page({
     countryIndex: 0,
 
 
-    isAgree: false
+    isAgree: false,
+    success: false
   },
-  
+
+  return_home: function (e) {
+    wx.switchTab({
+      url: '/pages/order_list/order_list',
+    });
+
+  },
+
   HandleaddressS: function (e) {
     this.setData({
       addressS: e.detail.value
@@ -120,15 +128,75 @@ Page({
 
   showTopTips: function () {
     var that = this;
-    this.setData({
-      showTopTips: true
-    });
-    setTimeout(function () {
-      that.setData({
-        showTopTips: false
+    if (this.data.addressS == '' || this.data.addressE == '' || this.data.message == '' || this.data.fee == 0) {
+      this.setData({
+        showTopTips: true
       });
-    }, 3000);
-    
+      return
+    } else {
+        var that = this;
+        var puid = wx.getStorageSync('skey');
+        var pphone = wx.getStorageSync('phone');
+        var sendAddress = that.data.addressS;
+        var acceptAddress = that.data.addressE;
+        var message = that.data.message;
+        var remark = that.data.remark;
+        var fee = that.data.fee;
+        var stime = that.data.dateS + ' ' + that.data.timeS + ':00';
+        var etime = that.data.dateE + ' ' + that.data.timeE + ':00';
+        var type1 = that.data.countries[that.data.countryIndex]
+
+        wx.request({
+          url: 'http://221h58z433.imwork.net/order/publish',
+          method: "POST",
+          data: {
+            puid: puid,
+            pphone: pphone,
+            type: type1,
+            sendAddress: sendAddress,
+            acceptAddress: acceptAddress,
+            message: message,
+            remark: remark,
+            fee: parseInt(fee),
+            stime: stime,
+            etime: etime
+          },
+          header: {
+            "content-type": "application/json"
+          },
+          success: function (res) {
+            console.log(res.data);
+            if (res.data == '1') {
+              wx.showToast({
+                title: '发布成功',
+                icon: 'loading',
+                duration: 2000
+              });
+              that.setData({
+                success: true
+              });
+            } else if (res.data == '0') {
+              wx.showToast({
+                title: '信息填写不全',
+                icon: 'loading',
+                duration: 2000
+              });
+              that.setData({
+                success: false
+              })
+            } else if (res.data == '-1') {
+              wx.showToast({
+                title: '最多同时发3条信息',
+                icon: 'loading',
+                duration: 2000
+              });
+              that.setData({
+                success: false
+              })
+            }
+          }
+        })
+    }
   },
 
 });

@@ -1,10 +1,10 @@
-<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+<view wx:if="{{!success}}">
     <view class="page__hd">
         <view class="page__title">发布订单</view>
         <view class="page__desc">输入订单信息</view>
     </view>
     <view class="page__bd">
-        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view>
+        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">请输入全部信息</view>
 
         <!-- <view class="weui-cells__title">表单</view> -->
         <view class="weui-cells weui-cells_after-title">
@@ -136,4 +136,8 @@
             <button class="weui-btn" type="primary" bindtap="showTopTips">确定</button>
         </view>
     </view>
+</view>
+<view class = 'success' wx:if="{{success}}">
+<view class='cheer'><icon type="success" size="24"/> 恭喜您发布成功!</view>
+<button type = "default" class = 'return' bindtap='return_home'>返回首页</button>
 </view>
