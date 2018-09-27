@@ -1,2 +1,24 @@
-<!--pages/djorder/index.wxml-->
-<text>pages/djorder/index.wxml</text>
+<view class="swiper-tab">
+
+ <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">我发布的</view>
+ <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">我接受的</view>
+
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+
+  <swiper-item >
+    <scroll-view wx:for="{{porderDetail}}" wx:for-item="i" wx:key="id">
+      <orderdetail detail="{{i}}" style="margain-buttom:100px"></orderdetail>
+
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+   <scroll-view wx:for="{{aorderDetail}}" wx:for-item="i" wx:key="id">
+      <orderdetail detail="{{i}}" style="margain-buttom:100px"></orderdetail>
+
+    </scroll-view>
+  </swiper-item>
+
+</swiper>

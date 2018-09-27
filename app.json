@@ -13,7 +13,8 @@
     "pages/my/trace/detail/detail",
     "pages/order_list/order_list",
     "pages/order_detail/order_detail",
-    "pages/publish/publish"
+    "pages/publish/publish",
+    "pages/orderAll/orderAll"
   ],
   "window": {
     "backgroundTextStyle": "light",
