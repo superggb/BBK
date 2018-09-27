@@ -54,11 +54,11 @@ Page({
   },
 
   onLoad: function() {
-    //this.getOrder();
+    this.getOrder();
   },
   addorder: function () {
     wx.navigateTo({
-      url: '../'
+      url: '../publish/publish'
     })
   }
 })
