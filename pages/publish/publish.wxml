@@ -1,0 +1,139 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__hd">
+        <view class="page__title">发布订单</view>
+        <view class="page__desc">输入订单信息</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view>
+
+        <!-- <view class="weui-cells__title">表单</view> -->
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">取件地址</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" bindinput="HandleaddressS" placeholder="请输入取件地址"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">送达地址</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" bindinput="HandleaddressE" placeholder="请输入送达地址"/>
+                </view>
+            </view>
+
+            <!-- <view class="weui-cells__title">文本域</view> -->
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell">
+                    <view class="weui-cell__bd">
+                        <textarea class="weui-textarea" bindinput="Handlemessage" placeholder="请输入取件短信" style="height: 3.3em" />
+                        <view class="weui-textarea-counter">0/200</view>
+                    </view>
+                </view>
+            </view>
+            
+            <!-- <view class="weui-cells__title">文本框</view> -->
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" bindinput="Handleremark" placeholder="备注信息" />
+                </view>
+            </view>
+        </view>
+
+            <view class="weui-cells__title">收货开始时间</view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">日期</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="date" value="{{dateS}}" start="{{dateS}}"  bindchange="bindDateStartChange">
+                        <view class="weui-input">{{dateS}}</view>
+                    </picker>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">时间</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="time" value="{{timeS}}" start="08:01" end="22:01" bindchange="bindTimeStartChange">
+                        <view class="weui-input">{{timeS}}</view>
+                    </picker>
+                </view>
+            </view>
+
+            <view class="weui-cells__title">收货截止时间</view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">日期</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="date" value="{{dateS}}" start="{{dateS}}"  bindchange="bindDateEndChange">
+                        <view class="weui-input">{{dateE}}</view>
+                    </picker>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">时间</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="time" value="{{timeS}}" start="08:01" end="22:01" bindchange="bindTimeEndChange">
+                        <view class="weui-input">{{timeE}}</view>
+                    </picker>
+                </view>
+            </view>
+
+        </view>
+
+        <!-- <view class="weui-cells__title">费用</view> -->
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input weui-cell_warn">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">费用</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" bindinput="Handlefee" placeholder="请输入金额"/>
+                </view>
+                <view class="weui-cell__ft">
+                    <icon type="warn" size="23" color="#E64340"></icon>
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">选择快递类型</view>
+        <view class="weui-cells weui-cells_after-title">
+
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">类型</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindCountryChange" value="{{countryIndex}}" range="{{countries}}">
+                        <view class="weui-select weui-select_in-select-after">{{countries[countryIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+        </view>
+
+        <checkbox-group bindchange="bindAgreeChange">
+            <label class="weui-agree" for="weuiAgree">
+                <view class="weui-agree__text">
+                    <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+                    <view class="weui-agree__checkbox-icon">
+                        <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+                    </view>
+                    阅读并同意<navigator url="" class="weui-agree__link">《相关条款》</navigator>
+                </view>
+            </label>
+        </checkbox-group>
+
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="showTopTips">确定</button>
+        </view>
+    </view>
+</view>

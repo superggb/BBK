@@ -117,6 +117,7 @@ Page({
                   console.log(res.data);
                   wx.setStorageSync('skey', res.data.skey);//将获取skey写入本地缓存
                   wx.setStorageSync('result', res.data.result);
+                  wx.setStorageSync('phone', res.data.phone);//手机号
                   // console.log(wx.getStorageSync('skey'));
                   wx.navigateBack();
                 }

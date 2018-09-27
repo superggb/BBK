@@ -13,7 +13,11 @@
     "pages/my/trace/detail/detail",
     "pages/order_list/order_list",
     "pages/order_detail/order_detail",
+<<<<<<< HEAD
     "pages/my/protocol/protocol"
+=======
+    "pages/publish/publish"
+>>>>>>> 27f8c4b9b35430395028d15085d5b7e2ffa2bd09
   ],
   "window": {
     "backgroundTextStyle": "light",

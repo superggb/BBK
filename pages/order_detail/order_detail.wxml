@@ -25,6 +25,14 @@
       <text>{{order_item_data.ptime}}</text>
     </view>
     <view>
+      <text>收货开始时间：</text>
+      <text>{{order_item_data.stime}}</text>
+    </view>
+    <view>
+      <text>收货结束时间：</text>
+      <text>{{order_item_data.etime}}</text>
+    </view>
+    <view>
       <text>备注：</text>
       <text>{{order_item_data.remark}}</text>
     </view>

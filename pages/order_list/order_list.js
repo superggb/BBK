@@ -29,10 +29,10 @@ Page({
     })
   },
 
-  onLoad: function() {
+  getOrder: function() {
     const that = this;
     wx.request({
-      url: 'https://www.superggb.cn/bbkServer/order/orders',
+      url: 'http://221h58z433.imwork.net/order/orders',
       header: {
         'content-type': 'application/json'
       },
@@ -44,9 +44,21 @@ Page({
       }
     })
   },
+
+  onPullDownRefresh: function() {
+    console.log("pull down");
+    wx.showNavigationBarLoading();
+    this.getOrder();
+    wx.stopPullDownRefresh();
+    wx.hideNavigationBarLoading();
+  },
+
+  onLoad: function() {
+    this.getOrder();
+  },
   addorder: function () {
     wx.navigateTo({
-      url: '../'
+      url: '../publish/publish'
     })
   }
 })
