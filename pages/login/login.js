@@ -124,7 +124,7 @@ Page({
       var stunumber = that.data.stunumber;
       var password = that.data.NewChanges;
       wx.request({
-        url: 'http://221h58z433.imwork.net/userInfo',
+        url: 'http://221h58z433.imwork.net/order/publish',
         method: "POST",
         data: {
           id: skey,
