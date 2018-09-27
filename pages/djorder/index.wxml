@@ -15,7 +15,7 @@
   </swiper-item>
 
   <swiper-item>
-   <scroll-view wx:for="{{aorderDetail}}" wx:for-item="i" wx:key="id">
+   <scroll-view  wx:for="{{aorderDetail}}" wx:for-item="i" wx:key="id">
       <orderdetail detail="{{i}}" style="margain-buttom:100px"></orderdetail>
 
     </scroll-view>

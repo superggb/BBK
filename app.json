@@ -13,20 +13,15 @@
     "pages/my/trace/detail/detail",
     "pages/order_list/order_list",
     "pages/order_detail/order_detail",
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     "pages/publish/publish",
-    "pages/orderAll/orderAll"
-=======
+    "pages/orderAll/orderAll",
+
 
     "pages/my/protocol/protocol",
-    "pages/publish/publish",
     "pages/my/address/address",
     "pages/my/address/editaddress/editaddress"
->>>>>>> 1b41053359e0be38940cf803554a9b137e39bac5
-=======
-    "pages/publish/publish"
->>>>>>> 05562c800dc3ea0f0b0f119d0d0d6bf3fe793e11
+
   ],
   "window": {
     "backgroundTextStyle": "light",

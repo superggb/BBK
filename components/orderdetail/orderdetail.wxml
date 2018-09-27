@@ -5,6 +5,7 @@
   <image src='/images/mono.png' style='width:25px;height:25px'></image>
   <text>{{detail.type}}</text>
   <view wx:if="{{detail.state==0}}"><text>未完成</text></view>
+  <view wx:elif="{{detail.state==1}}"><text>未完成</text></view>
   <view wx:elif="{{detail.state==2}}"><text>已完成</text></view>
 </view>
 

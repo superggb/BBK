@@ -32,7 +32,8 @@
 </view>
 
 <view>
-  <button bindtap='onclick' style='display:flex;color:green' wx:if="{{detailAll.state==0}}">确认收货</button>
+  <button bindtap='onclick' style='display:flex;color:green' wx:if="{{detailAll.state==1}}">确认收货</button>
+  <view wx:elif="{{detail.state==0}}"><text>等待接单</text></view>
   <button style='display:flex;color:green'>投诉</button>
 </view>
 

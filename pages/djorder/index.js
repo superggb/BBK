@@ -44,6 +44,44 @@ Page({
 
     })
   },
+
+  dataRefresh:function(){
+    var that = this;
+    let skey = wx.getStorageSync("skey")
+    wx.request({
+      url: 'https://www.superggb.cn/bbkServer/order/check?puid=' + skey,
+      method: 'GET',
+      success: function (res) {
+        console.log(res.data)
+        that.setData({
+          porderDetail: res.data
+        });
+      }
+
+    })
+    wx.request({
+      url: 'https://www.superggb.cn/bbkServer/order/check?auid=' + skey,
+      method: 'GET',
+      success: function (res) {
+        console.log(res.data)
+        that.setData({
+          aorderDetail: res.data
+        });
+      }
+
+    })
+  },
+
+  
+
+  onPullDownRefresh: function (){
+    console.log("pull down");
+    wx.showNavigationBarLoading();
+    this.dataRefresh();
+    wx.stopPullDownRefresh();
+    wx.hideNavigationBarLoading();
+
+  },
   // 滑动切换tab 
   bindChange: function (e) {
     var that = this;

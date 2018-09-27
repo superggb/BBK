@@ -18,8 +18,8 @@ Page({
     that.setData({
       detailAll:ob
     })
-    if(ob.state==0) that.setData({statement:'未完成'})
-    else that.setData({statement:'已完成'})
+    if(ob.state==2) that.setData({statement:'已完成'})
+    else that.setData({statement:'未完成'})
   },
 
   /**
@@ -90,6 +90,9 @@ Page({
             url: 'http://221h58z433.imwork.net/order/confirm?id='+orderid+"&confirmkey="+mdid,
             success:function(res){
               console.log(res.data)
+              wx.navigateBack({
+
+              })
 
             }
           })
