@@ -2,7 +2,7 @@
 Page({
   data: {
     userHeaderUrl: "../../images/useravatar.png",
-    optionNamas: ['用户协议', '我的优惠', '快递查询', '收货地址', '手机号码', '关于我们'],
+    optionNamas: ['我的订单', '我的优惠', '快递查询', '收货地址', '手机号码', '关于我们'],
     optionIcons: ['../../images/my/mine_1.png', '../../images/my/mine_2.png', '../../images/my/mine_3.png', '../../images/my/mine_4.png', '../../images/my/mine_5.png', '../../images/my/mine_6.png',]
   },
   onLoad: function (options) {
@@ -43,7 +43,7 @@ Page({
     let index = event.currentTarget.dataset.index
     switch (parseInt(index)) {
       case 0:
-        this.navigationTo("protocol", '')
+        this.navigationTo("order", '')
         break;
       case 1:
         this.navigationTo("coupon", '')

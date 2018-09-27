@@ -20,25 +20,6 @@
   transform: rotate(-40deg);
 }
 
-.expressname{
-  width: 90%;
-  margin: 0 auto;
-  border-radius: 5px;
-  border: 1px solid #4fbdfa;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.expressname input {
-  font-size: 22px;
-  height: 60px;
-  line-height: 60px;
-  display: inline-flex;
-  flex: 0 0 80%;
-  margin-left: 10px;
-}
-
 .search-input {
   width: 90%;
   margin: 0 auto;
