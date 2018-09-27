@@ -38,6 +38,6 @@
     </view>
   </view>
   <view class="accept_btn">
-    <button bindtap="acceptTask">接受订单</button>
+    <button id="accept" bindtap="acceptTask">接受订单</button>
   </view>
 </view>

@@ -37,7 +37,7 @@ Page({
         'content-type': 'application/json'
       },
       success(res) {
-        //console.log(res.data)
+        console.log(res.data)
         that.setData({
           order_items_data: res.data
         })
@@ -53,11 +53,12 @@ Page({
     wx.hideNavigationBarLoading();
   },
 
-  onLoad: function() {
+  onShow: function() {
     this.getOrder();
   },
+
   addorder: function () {
-    wx.navigateTo({
+    wx.navigateTo({ 
       url: '../publish/publish'
     })
   }

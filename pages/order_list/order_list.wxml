@@ -22,7 +22,7 @@
   </template>
   <view class="container">
     <view wx:for="{{order_items_data}}" wx:key="id">
-      <template is="order_item_temp" data="{{...item}}"/>
+      <template wx:if="{{item.state == 0}}" is="order_item_temp" data="{{...item}}"/>
     </view>
   </view>
 </view>
