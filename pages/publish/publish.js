@@ -14,7 +14,7 @@ var D = time.getDate() < 10 ? '0' + time.getDate() : time.getDate();
 //时  
 var h = time.getHours();
 //分  
-var m = time.getMinutes();
+var m = time.getMinutes() < 10 ? '0' + time.getMinutes() : time.getMinutes();;
 //秒  
 var s = time.getSeconds();  
 
