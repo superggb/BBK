@@ -1,0 +1,17 @@
+<!--pages/my/address/address.wxml-->
+<view class="address-view">
+        <view class="address-item">
+            <view class="select-view">
+                <image src="../../images/selectAddress.png"></image>
+            </view>
+            <view class="content-view">
+                <view class="top">
+                    <text class="name">默认地址</text>
+                </view>
+                <text class="address">{{address}}</text>
+            </view>
+            <view class="edit-view">
+                <image src="../../../images/my/editAddress.png" bindtap="editAddress"></image>
+            </view>
+        </view>
+</view>
