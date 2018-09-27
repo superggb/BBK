@@ -21,7 +21,7 @@ Page({
     */
   return_home: function (e) {
     wx.switchTab({
-    url: '/pages/dqorder/index',
+    url: '/pages/order_list',
   });
 
   },
