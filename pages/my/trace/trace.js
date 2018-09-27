@@ -25,6 +25,8 @@ Page({
 
   formSubmit: function (e) {
     let eorder = util.trim(e.detail.value.expressorder);
+    let ename = util.trim(e.detail.value.expressname);
+  
 
 
     if (!eorder) {
@@ -43,7 +45,7 @@ Page({
       return;
     }
 
-    this.searchExpress(eorder);
+    this.searchExpress(eorder,ename);
   },
 
   deleteHistory: function (e) {
@@ -104,12 +106,11 @@ Page({
     })
   },
 
-  searchExpress: function (eorder) {
+  searchExpress: function (eorder,ename) {
     let self = this;
     //正式环境下请求数据
     let appKey = "faab5cd5-084b-4922-b54f-e8884044ab75";
-    // let requestData = "{\"LogisticCode\":\"" + eorder + "\"}";
-    let requestData = "{\"ShipperCode\": \"SF\",\"LogisticCode\":\"" + eorder + "\"}";
+    let requestData = "{\"ShipperCode\":\"" + ename + "\",\"LogisticCode\":\"" + eorder + "\"}";
     let eBusinessID = "1386025";
     let requestType = "1002";
     let dataSign = Base64.encode(MD5(requestData + appKey));

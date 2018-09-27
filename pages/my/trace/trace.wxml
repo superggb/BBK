@@ -6,6 +6,9 @@
       <image src="../../../images/my/trace/logocat.png"></image>
     </view>
     <form bindsubmit="formSubmit">
+    <view class='expressname'>
+      <input focus="{{focus}}" placeholder="请输入快递品牌例如:SF" placeholder-class="placeholderstyle" cursor-spacing="50px" name="expressname" type="text" />
+    </view>
       <view class="search-input">
         <input focus="{{focus}}" placeholder="请输入快递单号" placeholder-class="placeholderstyle" cursor-spacing="50px" name="expressorder" type="number" />
         <image src="../../../images/my/trace/scanning.png" bindtap="scanCode"></image>

@@ -21,7 +21,11 @@ Page({
     */
   return_home: function (e) {
     wx.switchTab({
+<<<<<<< HEAD
+    url: '/pages/order_list',
+=======
     url: '/pages/order_list/order_list',
+>>>>>>> 27f8c4b9b35430395028d15085d5b7e2ffa2bd09
   });
 
   },
