@@ -1,0 +1,12 @@
+// trim.wxs
+
+var trim = {
+  trimSeconds: function (etime) {
+    console.log(etime);
+    console.log(etime.slice(0, -3));
+    return etime.slice(0, -3);
+  },
+}
+module.exports = {
+  trimSeconds: trim.trimSeconds
+}
