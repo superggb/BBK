@@ -137,8 +137,8 @@ Page({
         var that = this;
         var puid = wx.getStorageSync('skey');
         var pphone = wx.getStorageSync('phone');
-        var sendAddress = that.data.addressS;
-        var acceptAddress = that.data.addressE;
+        var sendAddress = that.data.addressE;
+        var acceptAddress = that.data.addressS;
         var message = that.data.message;
         var remark = that.data.remark;
         var fee = that.data.fee;
