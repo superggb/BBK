@@ -13,7 +13,11 @@
     "pages/my/trace/detail/detail",
     "pages/order_list/order_list",
     "pages/order_detail/order_detail",
-    "pages/publish/publish"
+
+    "pages/my/protocol/protocol",
+    "pages/publish/publish",
+    "pages/my/address/address",
+    "pages/my/address/editaddress/editaddress"
   ],
   "window": {
     "backgroundTextStyle": "light",
