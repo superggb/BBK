@@ -5,7 +5,8 @@ Page({
    */
   data: {
     detailAll:null,
-    statement:''
+    statement:'',
+    contact: ''
   },
 
   /**
@@ -19,7 +20,11 @@ Page({
       detailAll:ob
     })
     if(ob.state==2) that.setData({statement:'已完成'})
-    else that.setData({statement:'未完成'})
+    else if(ob.state==1) that.setData({statement:'等待送货'})
+    else that.setData({ statement: '等待接单' })
+    let skey = wx.getStorageSync("skey")
+    if(skey==that.data.detailAll.pid) that.setData({contact:that.data.detailAll.aphone})
+    else that.setData({contact:that.data.detailAll.pphone})
   },
 
   /**
@@ -99,6 +104,19 @@ Page({
         }
         else {
           console.log("cancel")
+        }
+      }
+    })
+  },
+  makePhone: function () {
+    wx.showModal({
+      title: "提示",
+      content: "你将使用运营商拨打电话"+this.data.contact,
+      success: function (res) {
+        if (res.confirm) {
+          wx.makePhoneCall({
+            phoneNumber: this.data.contact
+          })
         }
       }
     })

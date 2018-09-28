@@ -1,41 +1,46 @@
 <scroll-view style="display:flex;flex-direction:column">
-<view><text style='align-items:center;font-size:50px'>订单详情</text></view>
+<view><text style='align-items:center;font-size:20pt'>订单详情</text></view>
 <view style='display:flex;justify-content:space-between'>
-  <text>订单号：</text>  <text>{{detailAll.id}}</text>
+  <text class='msg'>订单号：</text>  <text class='msg'>{{detailAll.id}}</text>
 </view>
 <view style='display:flex;justify-content:space-between'>
-  <text>物品：</text> <text>{{detailAll.type}}</text>
+  <text class='msg'>物品：</text> <text class='msg'>{{detailAll.type}}</text>
 </view>
 <view style='display:flex;justify-content:space-between'>
-  <text>时间：</text> <text>{{detailAll.etime}}</text>
+  <text class='msg'>时间：</text> <text class='msg'>{{detailAll.etime}}</text>
 </view>
 <view style='display:flex;justify-content:space-between'>
-  <text>取件地点：</text> <text>{{detailAll.acceptAddress}}</text>
+  <text class='msg'>取件地点：</text> <text class='msg'>{{detailAll.acceptAddress}}</text>
 </view>
 <view style='display:flex;justify-content:space-between'>
-  <text>送件地点：</text> <text>{{detailAll.sendAddress}}</text>
+  <text class='msg'>送件地点：</text> <text class='msg'>{{detailAll.sendAddress}}</text>
 </view>
 <view style='display:flex;justify-content:space-between'>
-  <text>联系电话：</text> <text>{{detailAll.pphone}}</text>
+  <text class='msg'>发单人电话：</text> <text class='msg'>{{detailAll.pphone}}</text>
 </view>
 <view style='display:flex;justify-content:space-between'>
-  <text>备注：</text> <text>{{detailAll.message}}</text>
+  <text class='msg'>接单人电话：</text> <text class='msg'>{{detailAll.aphone}}</text>
 </view>
 <view style='display:flex;justify-content:space-between'>
-  <text>提醒：</text> <text>{{detailAll.remark}}</text>
+  <text class='msg'>备注：</text> <text class='msg'>{{detailAll.message}}</text>
 </view>
 <view style='display:flex;justify-content:space-between'>
-  <text>花费：</text> <text>￥{{detailAll.fee}}</text>
+  <text class='msg'>提醒：</text> <text class='msg'>{{detailAll.remark}}</text>
 </view>
 <view style='display:flex;justify-content:space-between'>
-  <text>完成状态：</text> <text>{{statement}}</text>
+  <text class='msg'>花费：</text> <text class='msg'>￥{{detailAll.fee}}</text>
+</view>
+<view style='display:flex;justify-content:space-between'>
+  <text class='msg'>完成状态：</text> <text class='msg'>{{statement}}</text>
 </view>
 
 <view>
-  <button bindtap='onclick' style='display:flex;color:green' wx:if="{{detailAll.state==1}}">确认收货</button>
-  <view wx:elif="{{detail.state==0}}"><text>等待接单</text></view>
-  <button style='display:flex;color:green'>投诉</button>
+  <button bindtap='onclick'  wx:if="{{detailAll.state==1}}">确认收货</button>
+  <view wx:elif="{{detail.state==0}}"><text>等待接单...</text></view>
+  <button>投诉</button>
+  <button bindtap='makePhone'>联系对方{{contact}}</button>
 </view>
+
 
 
 

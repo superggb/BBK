@@ -1,1 +1,12 @@
 /* pages/orderAll/orderAll.wxss */
+.button{
+  color:green;
+  text-align: center;
+  font-size: 18pt;
+  margin-buttom: 20px;
+  align-self: flex-end
+}
+.msg{
+  font-size: 14pt;
+  color: #888
+}
