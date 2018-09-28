@@ -21,6 +21,7 @@
         <view class="line_v_2 line_v"></view>
     </view>
     <view class="tel-view" bindtap="makePhone">
+        <text style="color:#c30000;font-size:30rpx">客服联系：</text>
         <text style="color:#c30000;font-size:30rpx">1008611</text>
     </view>
 </view>

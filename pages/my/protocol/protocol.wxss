@@ -1,1 +1,10 @@
 /* pages/my/用户协议/protocol.wxss */
+.text-view{
+    margin-left:35rpx;
+    margin-right: 35rpx;
+    text-indent: 50rpx;
+}
+.text-view text{
+    font-size: 28rpx;
+    line-height: 45rpx;
+}

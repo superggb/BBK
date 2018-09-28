@@ -37,13 +37,13 @@
         "pagePath": "pages/order_list/order_list",
         "iconPath": "images/nav/dqorder-off.png",
         "selectedIconPath": "images/nav/dqorder-on.png",
-        "text": "代取"
+        "text": "待接单"
       },
       {
         "pagePath": "pages/djorder/index",
         "iconPath": "images/nav/djorder-off.png",
         "selectedIconPath": "images/nav/djorder-on.png",
-        "text": "代寄"
+        "text": "已接单"
       },
       {
         "pagePath": "pages/my/index",
