@@ -2,6 +2,8 @@
 <view class="page-view">
   <image src="../../../images/my/logo.jpg" class="logo"></image>
   <view class="text-view">
-    <text>帮帮快小程序主要用于校园内同学互助代取实现P2P模式的运作</text>
+    <text>帮帮快小程序主要用于校园内同学互助代取实现P2P模式的运作\nauthor by:ggb,mars,lorrinie,Shinobuuuu</text>
   </view>
 </view>
+
+

@@ -12,6 +12,7 @@
     margin-bottom: 60rpx;
 }
 .text-view{
+    font-size: medium;
     margin-left:35rpx;
     margin-right: 35rpx;
     text-indent: 50rpx;
@@ -34,4 +35,18 @@
     height: 150rpx;
     margin-left:20rpx;
     margin-top:20rpx;  
+}
+
+.author{
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.author-view{
+   margin-left:35rpx;
+    margin-right: 35rpx;
+    text-indent: 50rpx;
+
 }
