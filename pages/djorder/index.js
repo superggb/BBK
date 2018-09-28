@@ -22,7 +22,7 @@ Page({
     });
     let skey = wx.getStorageSync("skey")
     wx.request({
-      url: 'https://www.superggb.cn/bbkServer/order/check?puid='+skey,
+      url: 'http://221h58z433.imwork.net/order/check?puid='+skey,
       method : 'GET',
       success : function (res){
         console.log(res.data)
@@ -33,7 +33,7 @@ Page({
       
     })
     wx.request({
-      url: 'https://www.superggb.cn/bbkServer/order/check?auid='+skey,
+      url: 'http://221h58z433.imwork.net/order/check?auid='+skey,
       method: 'GET',
       success: function (res) {
         console.log(res.data)
@@ -49,7 +49,7 @@ Page({
     var that = this;
     let skey = wx.getStorageSync("skey")
     wx.request({
-      url: 'https://www.superggb.cn/bbkServer/order/check?puid=' + skey,
+      url: 'http://221h58z433.imwork.net/order/check?puid=' + skey,
       method: 'GET',
       success: function (res) {
         console.log(res.data)
@@ -60,7 +60,7 @@ Page({
 
     })
     wx.request({
-      url: 'https://www.superggb.cn/bbkServer/order/check?auid=' + skey,
+      url: 'http://221h58z433.imwork.net/order/check?auid=' + skey,
       method: 'GET',
       success: function (res) {
         console.log(res.data)
