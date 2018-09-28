@@ -3,26 +3,27 @@
 
 <view style='display:flex;justify-content : flex-start'>
   <image src="../../images/item/package.svg" style='width:30px;height:30px'></image>
-  <text style='font-size:20pt;color:#000'>  {{detail.type}}</text>
+  <text style='font-size:16pt;color:#000'>  {{detail.type}}</text>
 </view>
 
 <view style='display:flex;justify-content:flex-start'>
   <image src="../../images/item/clock.svg" style='width:20px;height:20px'></image>
-  <text style='font-size:14pt;color:#888'>  {{detail.etime}}</text>
+  <text style='font-size:13pt;color:#888'>  {{detail.etime}}</text>
 </view>
 
 <view style='display:flex;justify-content:flex-start'>
   <image src="../../images/item/coordinates_fill.svg" style='width:20px;height:20px'></image>
-  <text style='font-size:14pt;color:#888'>  取件：{{detail.acceptAddress}}</text>
+  <text style='font-size:13pt;color:#888'>  取件：{{detail.acceptAddress}}</text>
 </view>
 
 <view style='display:flex;justify-content:flex-start'>
   <image src="../../images/item/coordinates_fill.svg" style='width:20px;height:20px'></image>
-  <text style='font-size:14pt;color:#888'>  送至：{{detail.sendAddress}}</text>
+  <text style='font-size:13pt;color:#888'>  送至：{{detail.sendAddress}}</text>
 </view>
 <view style='display:flex;justify-content:flex-end'>
   <view wx:if="{{detail.state==0}}" style='color:red'><text>等待接单</text></view>
   <view wx:elif="{{detail.state==1}}" style='color:green'><text>等待送货</text></view>
+  <view wx:elif="{{detail.state==3}}" style='color:gray'><text>已失效</text></view>
   <view wx:elif="{{detail.state==2}}" style='color:#000'><text>已完成</text></view>
 </view>
 

@@ -21,6 +21,7 @@ Page({
     })
     if(ob.state==2) that.setData({statement:'已完成'})
     else if(ob.state==1) that.setData({statement:'等待送货'})
+    else if(ob.state==3) that.setData({statement:'已失效'})
     else that.setData({ statement: '等待接单' })
     let skey = wx.getStorageSync("skey")
     if(skey==that.data.detailAll.pid) that.setData({contact:that.data.detailAll.aphone})
@@ -109,13 +110,14 @@ Page({
     })
   },
   makePhone: function () {
+    var that= this
     wx.showModal({
       title: "提示",
-      content: "你将使用运营商拨打电话"+this.data.contact,
+      content: "你将使用运营商拨打电话"+that.data.contact,
       success: function (res) {
         if (res.confirm) {
           wx.makePhoneCall({
-            phoneNumber: this.data.contact
+            phoneNumber: that.data.contact
           })
         }
       }

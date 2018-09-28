@@ -13,6 +13,7 @@ Page({
       '对不起，接单失败。',
       '对不起，您的信用度不够，无法接单。',
       '对不起，您的接单数目已经达到上限。',
+      '对不起，该订单已被别人接收',
       '恭喜您，接单成功。'
     ]
   },
@@ -47,8 +48,11 @@ Page({
           case -2:
             that.showMessageBox(2);
             break;
-          case 1:
+          case -3:
             that.showMessageBox(3);
+            break;
+          case 1:
+            that.showMessageBox(4);
             break;
         }
       }

@@ -1,26 +1,30 @@
 <!--order_list.wxml-->
+
+<wxs module="trim" src="./trim.wxs"></wxs>
+
 <view>
   <template name="order_item_temp">
     <view class="order_wrap" id="{{id}}"  bindtap="jumpToDetail">
       <view>
         <image src="../../images/item/package.svg" class="order_item_images"></image>
-        <text>{{type}}</text>
+        <text>类型：{{type}}</text>
       </view>
       <view>
         <image src="../../images/item/coordinates_fill.svg" class="order_item_images"></image>
-        <text>{{sendAddress}}</text>
+        <text>送货地址：{{sendAddress}}</text>
       </view>
       <view>
         <image src="../../images/item/financial_fill.svg" class="order_item_images"></image>
-        <text>{{fee}}元</text>
+        <text>赏金：{{fee}}元</text>
       </view>
       <view>
         <image src="../../images/item/clock.svg" class="order_item_images"></image>
-        <text>{{ptime}}</text>
+        <text>送货截止：{{trim.trimSeconds(etime)}}</text>
       </view>
     </view>
   </template>
-  <view class="container">
+
+  <view class="container page__bd">
     <view wx:for="{{order_items_data}}" wx:key="id">
       <template wx:if="{{item.state == 0}}" is="order_item_temp" data="{{...item}}"/>
     </view>
