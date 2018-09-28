@@ -17,7 +17,7 @@ Page({
     //     'ptime': '2018-06-14 18:16:08'
     //   }]
   },
-  
+
   jumpToDetail: function(event) {
     //console.log(event.currentTarget.id);
     // console.log(this.data.order_items_data
@@ -37,7 +37,7 @@ Page({
         'content-type': 'application/json'
       },
       success(res) {
-        console.log(res.data)
+        //console.log(res.data)
         that.setData({
           order_items_data: res.data
         })
