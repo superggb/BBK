@@ -1,5 +1,7 @@
 /* pages/order_detail/order_detail.wxss */
 
-.accpet_btn {
-  
+@import '../../libs/weui.wxss';
+
+.wrapper {
+  margin-bottom: 4rem;
 }
