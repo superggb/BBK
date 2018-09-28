@@ -1,0 +1,27 @@
+<!--components/orderdetail/orderdetail.wxml-->
+<view class="inner" style='display:flex;flex-direction:column;border:2px solid gray;padding:10px' bindtap='toDetail'>
+
+<view style='display:flex;justify-content:space-between'>
+  <image src='/images/mono.png' style='width:25px;height:25px'></image>
+  <text>{{detail.type}}</text>
+  <view wx:if="{{detail.state==0}}"><text>未完成</text></view>
+  <view wx:elif="{{detail.state==1}}"><text>未完成</text></view>
+  <view wx:elif="{{detail.state==2}}"><text>已完成</text></view>
+</view>
+
+<view style='display:flex;justify-content:space-between'>
+  <image src='/images/time.png' style='width:25px;height:25px'></image>
+  <text>{{detail.etime}}</text>
+</view>
+
+<view style='display:flex;justify-content:space-between'>
+  <image src='/images/addr.png' style='width:25px;height:25px'></image>
+  <text>取件：{{detail.acceptAddress}}</text>
+</view>
+
+<view style='display:flex;justify-content:space-between'>
+  <image src='/images/dest.png' style='width:25px;height:25px'></image>
+  <text>送至：{{detail.sendAddress}}</text>
+</view>
+
+</view>

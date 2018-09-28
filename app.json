@@ -14,10 +14,21 @@
     "pages/order_list/order_list",
     "pages/order_detail/order_detail",
 
+<<<<<<< HEAD
     "pages/my/protocol/protocol",
     "pages/publish/publish",
     "pages/my/address/address",
     "pages/my/address/editaddress/editaddress"
+=======
+    "pages/publish/publish",
+    "pages/orderAll/orderAll",
+
+
+    "pages/my/protocol/protocol",
+    "pages/my/address/address",
+    "pages/my/address/editaddress/editaddress"
+
+>>>>>>> 3094ca751bcf76e1a2799907ddd04daee6e13d9e
   ],
   "window": {
     "backgroundTextStyle": "light",

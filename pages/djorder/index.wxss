@@ -1,1 +1,26 @@
-/* pages/djorder/index.wxss */
+
+.swiper-tab{
+  width: 100%; 
+  border-bottom: 2rpx solid #777777; 
+  text-align: center; 
+  line-height: 80rpx;
+}
+.swiper-tab-list{
+  font-size: 40rpx; 
+  display: inline-block; 
+  width: 50%; 
+  color: #777777; 
+}
+.on{
+  color: green; 
+  border-bottom: 5rpx solid green;
+}
+.swiper-box{ 
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+ }
+.swiper-box view{ 
+  text-align: center; 
+}

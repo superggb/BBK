@@ -1,1 +1,8 @@
-{}
+{
+  "component":true,
+  "usingComponents":{
+    "orderdetail": "/components/orderdetail/orderdetail"
+  },
+  "enablePullDownRefresh": true
+
+}
