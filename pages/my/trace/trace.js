@@ -118,15 +118,16 @@ Page({
     console.log(dataSign);
 
     wx.request({
-      url: 'http://api.kdniao.cc/Ebusiness/EbusinessOrderHandle.aspx',
-      data: {
-        RequestData: requestData,
-        EBusinessID: eBusinessID,
-        RequestType: requestType,
-        DataSign: dataSign,
-        DataType: "2"
-      },
-      method: 'POST',
+      // url: 'http://api.kdniao.cc/Ebusiness/EbusinessOrderHandle.aspx',
+      // data: {
+      //   RequestData: requestData,
+      //   EBusinessID: eBusinessID,
+      //   RequestType: requestType,
+      //   DataSign: dataSign,
+      //   DataType: "2"
+      // },
+      url: 'http://221h58z433.imwork.net/traceOrder?'+'code='+ename+'&num='+eorder,
+      method: 'GET',
       header: {
         'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
       },

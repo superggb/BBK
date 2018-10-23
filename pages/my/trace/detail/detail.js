@@ -46,22 +46,24 @@ Page({
     console.log(requestData);
 
     wx.request({
-      url: 'http://api.kdniao.cc/Ebusiness/EbusinessOrderHandle.aspx',
-      data: {
-        RequestData: requestData,
-        EBusinessID: eBusinessID,
-        RequestType: requestType,
-        DataSign: dataSign,
-        DataType: "2"
-      },
-      method: 'POST',
+      // url: 'http://api.kdniao.cc/Ebusiness/EbusinessOrderHandle.aspx',
+      // data: {
+      //   RequestData: requestData,
+      //   EBusinessID: eBusinessID,
+      //   RequestType: requestType,
+      //   DataSign: dataSign,
+      //   DataType: "2"
+      // },
+      // method: 'POST',
+      url: 'http://221h58z433.imwork.net/traceOrder?' + 'code=' + data.ShipperCode + '&num=' + data.LogisticCode,
+      method:'GET',
       header: {
         'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
       },
       success: function (res) {
         wx.hideLoading()
         let resData = res.data;
-        console.info(resData);
+        console.info('resData2:'+resData);
 
         resData.Traces = resData.Traces.sort(function (a, b) {
           let atime = Date.parse(a.AcceptTime);
