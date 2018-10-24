@@ -65,19 +65,25 @@
     </view>
 
     <view wx:if="{{detailAll.state!=3}}">
-      <view class="weui-form-preview__ft" wx:if="{{detailAll.state==1}}">
-      <a bindtap="onclick" 
-        class="weui-form-preview__btn weui-form-preview__btn_primary">
-        确认收货
-      </a>
-    </view>
+      <view class="weui-form-preview__ft" wx:if="{{detailAll.state==1&&aaa==1}}">
+        
+          <a bindtap="onclick" 
+          class="weui-form-preview__btn weui-form-preview__btn_primary">确认收货</a>
+      
+      </view>
 
-    <view class="weui-form-preview__ft">
+    <view class="weui-form-preview__ft" wx:if="{{detailAll.state!=0}}">
       <a bindtap="makePhone" 
         class="weui-form-preview__btn weui-form-preview__btn_primary">
         联系对方{{contact}}
       </a>
     </view>
+    </view>
+    <view class="weui-form-preview__ft" wx:if="{{detailAll.state!=0}}">
+      <a bindtap="tousu" 
+        class="weui-form-preview__btn weui-form-preview__btn_primary">
+        投诉
+      </a>
     </view>
 
 

@@ -6,7 +6,8 @@ Page({
   data: {
     detailAll:null,
     statement:'',
-    contact: ''
+    contact: '',
+    aaa : 0
   },
 
   /**
@@ -24,7 +25,10 @@ Page({
     else if(ob.state==3) that.setData({statement:'已失效'})
     else that.setData({ statement: '等待接单' })
     let skey = wx.getStorageSync("skey")
-    if(skey==that.data.detailAll.pid) that.setData({contact:that.data.detailAll.aphone})
+    if(skey==that.data.detailAll.puid) {
+      that.setData({contact:that.data.detailAll.aphone})
+      that.setData({aaa:1})
+      }
     else that.setData({contact:that.data.detailAll.pphone})
   },
 
@@ -77,6 +81,14 @@ Page({
     
   },
 
+  tousu : function(){
+    let str = JSON.stringify(this.data.detailAll);
+    console.log(this.data.detailAll)
+    wx.navigateTo({
+      url: '/pages/complain/complain?jsonstr=' + str
+    })
+  },
+
   onclick: function () {
     var MD5 = require('../../utils/md5.min.js')
     var that = this
@@ -93,7 +105,7 @@ Page({
         if(res.confirm){
           console.log("ok")
           wx.request({
-            url: 'http://221h58z433.imwork.net/order/confirm?id='+orderid+"&confirmkey="+mdid,
+            url: 'https://www.superggb.cn/bbkServer/order/confirm?id='+orderid+"&confirmkey="+mdid,
             success:function(res){
               console.log(res.data)
               wx.navigateBack({

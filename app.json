@@ -17,8 +17,8 @@
     "pages/my/address/address",
     "pages/my/address/editaddress/editaddress",
     "pages/publish/publish",
-    "pages/orderAll/orderAll"
-
+    "pages/orderAll/orderAll",
+    "pages/complain/complain"
   ],
   "window": {
     "backgroundTextStyle": "light",

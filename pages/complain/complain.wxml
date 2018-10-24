@@ -1,0 +1,42 @@
+<view wx:if="{{!success}}">
+    <view class="page__hd">
+        <view class="page__title">投诉</view>
+        <view class="page__desc">输入投诉信息</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">请输入全部信息</view>
+
+        <!-- <view class="weui-cells__title">表单</view> -->
+        <view class="weui-cells weui-cells_after-title">
+            
+
+            <!-- <view class="weui-cells__title">文本域</view> -->
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell">
+                    <view class="weui-cell__bd">
+                        <textarea class="weui-textarea" bindinput="Handlemessage" placeholder="请输入投诉理由" style="height: 3.3em" />
+                        <view class="weui-textarea-counter">0/200</view>
+                    </view>
+                </view>
+            </view>
+            
+
+            
+            
+
+            
+            
+
+        </view>
+
+        
+
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="showTopTips">确定</button>
+        </view>
+    </view>
+</view>
+<view class = 'success' wx:if="{{success}}">
+<view class='cheer'><icon type="success" size="24"/> 恭喜您发布成功!</view>
+<button type = "default" class = 'return' bindtap='return_home'>返回首页</button>
+</view>
