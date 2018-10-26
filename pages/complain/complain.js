@@ -31,11 +31,11 @@ Page({
       orderm: ob
     })
     console.log(that.data.orderm)
-    let skey = wx.getStorageSync("skey")
-    if (skey == that.data.orderm.puid) {
-      that.setData({ cuid: that.data.orderm.auid })
-    }
-    else that.setData({ cuid: that.data.orderm.puid })
+    // let skey = wx.getStorageSync("skey")
+    // if (skey == that.data.orderm.puid) {
+    //   that.setData({ cuid: that.data.orderm.auid })
+    // }
+    // else that.setData({ cuid: that.data.orderm.puid })
   },
 
   
@@ -87,7 +87,7 @@ Page({
     } else {
       var that = this;
       var reason=this.data.message
-      var uid=this.data.cuid
+      var uid = wx.getStorageSync("skey")
       var id = this.data.orderm.id
       
 

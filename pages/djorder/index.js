@@ -20,30 +20,38 @@ Page({
         });
       }
     });
-    let skey = wx.getStorageSync("skey")
-    wx.request({
-      url: 'https://www.superggb.cn/bbkServer/order/check?puid='+skey,
-      method : 'GET',
-      success : function (res){
-        console.log(res.data)
-        that.setData({
-          porderDetail:res.data
-        });
-      }
+    // let skey = wx.getStorageSync("skey")
+    // wx.request({
+    //   url: 'https://www.superggb.cn/bbkServer/order/check?puid='+skey,
+    //   method : 'GET',
+    //   success : function (res){
+    //     console.log(res.data)
+    //     that.setData({
+    //       porderDetail:res.data
+    //     });
+    //   }
       
-    })
-    wx.request({
-      url: 'https://www.superggb.cn/bbkServer/order/check?auid='+skey,
-      method: 'GET',
-      success: function (res) {
-        console.log(res.data)
-        that.setData({
-          aorderDetail: res.data
-        });
-      }
+    // })
+    // wx.request({
+    //   url: 'https://www.superggb.cn/bbkServer/order/check?auid='+skey,
+    //   method: 'GET',
+    //   success: function (res) {
+    //     console.log(res.data)
+    //     that.setData({
+    //       aorderDetail: res.data
+    //     });
+    //   }
 
-    })
+    // })
   },
+
+  onShow:function(){
+    this.dataRefresh();
+  },
+
+
+
+  
 
   dataRefresh:function(){
     var that = this;

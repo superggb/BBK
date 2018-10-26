@@ -24,3 +24,20 @@
 .swiper-box view{ 
   text-align: center; 
 }
+.swiper-items{
+  height: 100%;
+}
+.scroll-views{
+  height: 100%;
+}
+
+.list {
+  height: 100%;
+  overflow:auto;
+  margin:auto;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}

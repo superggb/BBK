@@ -75,9 +75,8 @@
     <view class="weui-form-preview__ft" wx:if="{{detailAll.state!=0}}">
       <a bindtap="makePhone" 
         class="weui-form-preview__btn weui-form-preview__btn_primary">
-        联系对方{{contact}}
+        联系对方
       </a>
-    </view>
     </view>
     <view class="weui-form-preview__ft" wx:if="{{detailAll.state!=0}}">
       <a bindtap="tousu" 
@@ -85,6 +84,28 @@
         投诉
       </a>
     </view>
+
+    <view class="weui-form-preview__ft" wx:if="{{detailAll.state==0}}">
+      <a bindtap="cancel" 
+        class="weui-form-preview__btn weui-form-preview__btn_primary">
+        撤销
+      </a>
+    </view>
+    </view>
+
+    <!-- <view class="weui-form-preview__ft" wx:if="{{detailAll.state!=0}}">
+      <a bindtap="tousu" 
+        class="weui-form-preview__btn weui-form-preview__btn_primary">
+        投诉
+      </a>
+    </view>
+
+    <view class="weui-form-preview__ft" wx:if="{{detailAll.state==0}}">
+      <a bindtap="cancel" 
+        class="weui-form-preview__btn weui-form-preview__btn_primary">
+        撤销
+      </a>
+    </view> -->
 
 
   </view>

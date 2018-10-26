@@ -23,6 +23,7 @@ Page({
         that.setData({
           complain_items_data: res.data
         })
+        console.log(that.data.complain_items_data)
       }
     })
   },

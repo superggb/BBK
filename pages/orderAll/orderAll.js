@@ -89,6 +89,31 @@ Page({
     })
   },
 
+  cancel:function(){
+    let id = this.data.detailAll.id
+    wx.showModal({
+      title: '确认提醒',
+      content: '确定要撤销此订单？',
+      success: function (res) {
+        if (res.confirm) {
+          console.log("ok")
+          wx.request({
+            url: 'https://www.superggb.cn/bbkServer/deleteOrder?id='+id,
+            success: function (res) {
+              console.log(res.data)
+              wx.navigateBack({})
+
+            }
+          })
+        }
+        else {
+          console.log("cancel")
+        }
+      }
+    })
+
+  },
+
   onclick: function () {
     var MD5 = require('../../utils/md5.min.js')
     var that = this
@@ -100,20 +125,27 @@ Page({
 
     wx.showModal({
       title: '确认提醒',
-      content: '确定已经收到货物？',
+      content: '确定已经收到货物并支付吗？',
       success:function(res){
         if(res.confirm){
-          console.log("ok")
-          wx.request({
-            url: 'https://www.superggb.cn/bbkServer/order/confirm?id='+orderid+"&confirmkey="+mdid,
-            success:function(res){
-              console.log(res.data)
-              wx.navigateBack({
-
-              })
-
-            }
+          wx.navigateTo({
+            url: '/pages/pay/pay?cost='+that.data.detailAll.fee+'&&orderid='+orderid+'&&mdid='+mdid,
           })
+          
+          console.log("ok")
+          // wx.request({
+          //   url: 'https://www.superggb.cn/bbkServer/order/confirm?id='+orderid+"&confirmkey="+mdid,
+          //   success:function(res){
+          //     console.log(res.data)
+          //     wx.navigateBack({
+
+          //     })
+
+          //   }
+          // })
+          // wx.navigateBack({
+            
+          // })
         }
         else {
           console.log("cancel")
