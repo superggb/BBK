@@ -147,7 +147,7 @@ Page({
         var type1 = that.data.countries[that.data.countryIndex]
 
         wx.request({
-          url: 'http://221h58z433.imwork.net/order/publish',
+          url: 'https://www.superggb.cn/bbkServer/order/publish',
           method: "POST",
           data: {
             puid: puid,

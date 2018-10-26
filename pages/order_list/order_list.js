@@ -32,7 +32,7 @@ Page({
   getOrder: function() {
     const that = this;
     wx.request({
-      url: 'http://221h58z433.imwork.net/order/orders',
+      url: 'https://www.superggb.cn/bbkServer/order/orders',
       header: {
         'content-type': 'application/json'
       },

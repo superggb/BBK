@@ -19,20 +19,33 @@ Page({
   },
 
   /** 
-   * 点击接受订单后触发的事件 
+   * 点击确认接受订单后触发的事件 
+   */
+  confirmTask: function() {
+    var that = this;
+    wx.showModal({
+      title: '提示',
+      content: '接受订单后无法取消，确定接受订单吗',
+      showCancel: true,
+      success: function (res) {
+        if (res.confirm) {
+          that.acceptTask();
+        }
+      }
+    });
+  },
+
+  /** 
+   * 点击确认接受后触发的事件 
    */
   acceptTask: function() {
-    //console.log(wx.getStorageSync('skey'));
-    //console.log(wx.getStorageSync('phone'));
     var that = this;
     this.data.skey = wx.getStorageSync('skey');
     this.data.phone = wx.getStorageSync('phone');
-    console.log("phone:");
-    console.log(wx.getStorageSync('phone'));
-    //console.log(this.data.skey);
-    //console.log(this.data.order_item_data.id);
+    //console.log("phone:");
+    //console.log(wx.getStorageSync('phone'));
     wx.request({
-      url: 'http://221h58z433.imwork.net/order/accept?auid=' + this.data.skey + '&id=' + this.data.order_item_data.id + '&aphone=' + this.data.phone,
+      url: 'https://www.superggb.cn/bbkServer/order/accept?auid=' + this.data.skey + '&id=' + this.data.order_item_data.id + '&aphone=' + this.data.phone,
       header: {
         'content-type': 'application/json'
       },
