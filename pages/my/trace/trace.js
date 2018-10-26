@@ -6,7 +6,30 @@ Page({
   data: {
     result: {},
     focus: false,
-    historySearch: []
+    historySearch: [],
+    company: ['顺丰速运', '百世快递', '中通快递', '申通快递',
+    '圆通快递','韵达快递','邮政快递包裹','EMS','德邦快运'],
+    enames:['SF','HTKY','ZTO','STO','YTO','YD','YZPY','EMS',
+    'DBLKY'],
+    // objectArray: [
+    //   {
+    //     id: 0,
+    //     name: '美国'
+    //   },
+    //   {
+    //     id: 1,
+    //     name: '中国'
+    //   },
+    //   {
+    //     id: 2,
+    //     name: '巴西'
+    //   },
+    //   {
+    //     id: 3,
+    //     name: '日本'
+    //   }
+    // ],
+    index: 0,
   },
 
   onLoad: function () {
@@ -23,9 +46,20 @@ Page({
     this.showHistory();
   },
 
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
+
   formSubmit: function (e) {
+    var that=this;
     let eorder = util.trim(e.detail.value.expressorder);
-    let ename = util.trim(e.detail.value.expressname);
+    // let ename = util.trim(e.detail.value.expressname);
+    console.log(that.data.index);
+    let ename = that.data.enames[that.data.index];
+    console.log(ename);
 
     if (!eorder) {
       wx.showModal({
@@ -42,7 +76,6 @@ Page({
       })
       return;
     }
-
     this.searchExpress(eorder,ename);
   },
 

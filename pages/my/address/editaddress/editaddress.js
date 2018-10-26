@@ -26,7 +26,7 @@ Page({
   editAddress:function(){
     const that = this;
 
-    let url = api.testUrl + "editaddress?id=" + wx.getStorageSync("skey")+"&address="+that.data.address;
+    let url = "https://www.superggb.cn/bbkServer/editaddress?id=" + wx.getStorageSync("skey")+"&address="+that.data.address;
     console.log(url);
     wx.request({
       url: url,
@@ -38,9 +38,10 @@ Page({
             duration: 1000,
             mask: true
           })
-          wx.navigateBack({
-            delta: 1
-          })}else{
+          wx.redirectTo({
+            url: '../address'
+          })
+          }else{
           wx.showToast({
             title: '修改失败',
             icon: 'succes',

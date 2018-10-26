@@ -25,7 +25,7 @@ Page({
 
 getAddress:function(skey){
   const that = this;
-  let url=api.testUrl+"address?id="+skey;
+  let url="https://www.superggb.cn/bbkServer/address?id="+skey;
   wx.request({
     url: url,
     success(res) {
@@ -37,7 +37,7 @@ getAddress:function(skey){
 },
 
 editAddress:function(){
-  wx.navigateTo({
+  wx.redirectTo({
     url: 'editaddress/editaddress'
   })
 },
