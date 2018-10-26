@@ -2,7 +2,9 @@
 
 @import '../../libs/weui.wxss';
 .container {
-  margin: 15rpx 35rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  margin-top: 20rpx;
   box-sizing: border-box;
   width:100%;
   height:100%;

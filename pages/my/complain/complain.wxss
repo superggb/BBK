@@ -1,0 +1,73 @@
+/* pages/my/trace/complain/complain.wxss */
+@import '../../../libs/weui.wxss';
+
+.container {
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+} 
+
+.complain_wrap {
+  margin-bottom: 10rpx;
+  padding: 27rpx 30rpx;
+  border-radius: 20rpx;
+  box-shadow: 2px 2px 8px #999999;
+  background: #FFFFCC;
+  font-size: 35rpx;
+}
+
+.time {
+  display:inline;
+  color: #666666;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.state {
+  float:right;
+  font-weight: bold;
+}
+
+.swiper-tab{
+	width: 100%;
+	text-align: center;
+	line-height: 80rpx;
+  box-shadow: 1px 1px 3px #CCCCCC;
+  background: white;
+}
+
+.swiper-tab-list{
+  font-size: 35rpx;
+  display: inline-block;
+	width: 50%;
+	color: #777777;
+}
+
+.on{
+  color: green;
+	border-bottom: 5rpx solid green;
+}
+ 
+.swiper-box{
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.accepted {
+  color: green;
+}
+
+.not_accepted {
+  color: red;
+}
+
+.under_review {
+  color: grey;
+}
+
+.content {
+  margin-top: 18rpx;
+}

@@ -1,0 +1,24 @@
+// complain.wxs
+
+var state_text = ['待审核', '通过', '未通过'];
+var state_color = ['under_review', 'accepted', 'not_accepted'];
+
+var complain = {
+  /**
+   * 处理接收到的状态
+   */
+  handleState: function (state) {
+    return state_text[state];
+  },
+  
+  /**
+   * 按状态的不同改变相应的颜色
+   */
+  handleColor: function(state) {
+    return state_color[state];
+  }
+}
+module.exports = {
+  handleState: complain.handleState,
+  handleColor: complain.handleColor
+}

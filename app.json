@@ -17,8 +17,14 @@
     "pages/my/address/address",
     "pages/my/address/editaddress/editaddress",
     "pages/publish/publish",
+<<<<<<< HEAD
     "pages/orderAll/orderAll"
 
+=======
+    "pages/orderAll/orderAll",
+    "pages/complain/complain",
+    "pages/my/complain/complain"
+>>>>>>> 78da085528bd41748b32f05cdbff2f56eb0d84e2
   ],
   "window": {
     "backgroundTextStyle": "light",

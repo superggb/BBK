@@ -52,21 +52,7 @@ Page({
       }
     })
   },
-
-  complain: function () {
-    wx.showModal({
-      title: '友情提示',
-      content: '暂未开放投诉中心，有问题可直接拨打下方客服电话',
-      success: function (res) {
-        if (res.confirm) {
-          console.log('用户点击确定')
-        } else if (res.cancel) {
-          console.log('用户点击取消')
-        }
-      }
-    })
-  },
-
+  
   selectoption: function(event) {
     console.log(event)
     let index = event.currentTarget.dataset.index
@@ -85,8 +71,7 @@ Page({
         this.navigationTo("address", '')
         break;
       case 4:
-        //this.navigationTo("setting", '')
-        this.complain()
+        this.navigationTo("complain", '')
         break;
       case 5:
         this.navigationTo("about", '')

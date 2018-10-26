@@ -58,7 +58,7 @@
       </view>
     </view>
     <view class="weui-form-preview__ft">
-      <a bindtap="acceptTask" 
+      <a bindtap="confirmTask" 
         class="weui-form-preview__btn weui-form-preview__btn_primary">
         接受订单
       </a>
