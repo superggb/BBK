@@ -2,22 +2,33 @@
 
 Page({
   data: {
-    order_items_data: []
-    // order_items_data:[{
-    //   'id': 1,
-    //   'type': 'MacBook pro',
-    //   'sendAddress': '山东大学威海校区六号楼',
-    //   'fee': 10,
-    //   'ptime': '2018-06-14 18:16:08'
-    // }, {
-    //     'id': 2,
-    //     'type': 'MacBook pro',
-    //     'sendAddress': '山东大学威海校区六号楼',
-    //     'fee': 10,
-    //     'ptime': '2018-06-14 18:16:08'
-    //   }]
+    order_items_data: [],
+    // 页面配置
+    winWidth: 0,
+    winHeight: 0,
+    // tab切换
+    currentTab: 0,
+    skey: 0
   },
   
+  onLoad: function () {
+    var that = this;
+    //console.log("skey:" + this.data.skey);
+    /**
+     * 获取系统信息
+     */
+    wx.getSystemInfo({
+
+      success: function (res) {
+        that.setData({
+          winWidth: res.windowWidth,
+          winHeight: res.windowHeight
+        });
+      }
+
+    });
+  },
+
   jumpToDetail: function(event) {
     //console.log(event.currentTarget.id);
     // console.log(this.data.order_items_data
@@ -54,6 +65,9 @@ Page({
   },
 
   onShow: function() {
+    this.setData({
+      skey: wx.getStorageSync("skey")
+    });
     this.getOrder();
   },
 
@@ -61,5 +75,27 @@ Page({
     wx.navigateTo({ 
       url: '../publish/publish'
     })
-  }
+  },
+
+  /**
+   * 滑动切换tab
+   */
+  bindChange: function (e) {
+    var that = this;
+    that.setData({ currentTab: e.detail.current });
+  },
+
+  /**
+   * 点击tab切换
+   */
+  swichNav: function (e) {
+    var that = this;
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      that.setData({
+        currentTab: e.target.dataset.current
+      })
+    }
+  }  
 })

@@ -6,9 +6,8 @@ Page({
     winHeight: 0,
     // tab切换
     currentTab: 0,
-    complain_items_data: [],
-    currentTab: 0,
-    skey: ''
+    skey: '',
+    complain_items_data: []
   },
 
   getComplain: function () {

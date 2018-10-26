@@ -74,11 +74,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.data.skey = wx.getStorageSync('skey');
-    this.data.phone = wx.getStorageSync('phone');
     let order_item = JSON.parse(options.order_item);
     console.log(order_item);
     this.setData({
+      skey: wx.getStorageSync('skey'),
+      phone: wx.getStorageSync('phone'),
       order_item_data: order_item
     });
   },

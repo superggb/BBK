@@ -103,7 +103,7 @@ Page({
             //console.log(userNick);
             if (code) {
               wx.request({
-                url: 'http://221h58z433.imwork.net/login',//服务器的地址
+                url: 'https://www.superggb.cn/bbkServer/login',//服务器的地址
                 method: 'POST', 
                 data: {
                   code: code,
@@ -117,6 +117,7 @@ Page({
                   console.log(res.data);
                   wx.setStorageSync('skey', res.data.skey);//将获取skey写入本地缓存
                   wx.setStorageSync('result', res.data.result);
+                  wx.setStorageSync('phone', res.data.phone);
                   // console.log(wx.getStorageSync('skey'));
                   wx.navigateBack();
                 }

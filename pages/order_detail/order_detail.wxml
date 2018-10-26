@@ -57,7 +57,7 @@
         <text class="weui-form-preview__value">{{order_item_data.remark}}</text>
       </view>
     </view>
-    <view class="weui-form-preview__ft">
+    <view wx:if="{{order_item_data.puid != skey}}" class="weui-form-preview__ft">
       <a bindtap="confirmTask" 
         class="weui-form-preview__btn weui-form-preview__btn_primary">
         接受订单

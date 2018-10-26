@@ -32,3 +32,65 @@
     width: 110rpx;
     height: 110rpx;
 }
+
+
+.swiper-tab{
+	width: 100%;
+	text-align: center;
+	line-height: 80rpx;
+  box-shadow: 1px 1px 3px #CCCCCC;
+  background: white;
+}
+
+.swiper-tab-list{
+  font-size: 35rpx;
+  display: inline-block;
+	width: 50%;
+	color: #777777;
+}
+
+.on{
+  color: green;
+	border-bottom: 5rpx solid green;
+}
+ 
+.swiper-box{
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.accepted {
+  color: green;
+}
+
+.not_accepted {
+  color: red;
+}
+
+.under_review {
+  color: grey;
+}
+
+.content {
+  margin-top: 18rpx;
+}
+
+.swiper-items {
+  height: 100%;
+}
+
+.scroll-views {
+  height: 100%;
+}
+
+.list {
+  overflow:auto;
+  margin:auto;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
