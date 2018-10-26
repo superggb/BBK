@@ -2,6 +2,7 @@
 
 Page({
   data: {
+    count: 0,
     showTopTips: false,
     message: '',
 
@@ -42,6 +43,7 @@ Page({
 
   Handlemessage: function (e) {
     this.setData({
+      count: e.detail.value.length,
       message: e.detail.value
     })
   },

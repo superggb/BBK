@@ -12,7 +12,7 @@
   margin-bottom: 20rpx;
   border-radius: 20rpx;
   padding: 25rpx 30rpx;
-  box-shadow: 2px 2px 8px #999999;
+  box-shadow: 2px 2px 8px #DDDDDD;
   background: white;
 }
 
@@ -59,6 +59,7 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
+  background: #F5F5F5;
 }
 
 .accepted {

@@ -13,8 +13,8 @@
   margin-bottom: 20rpx;
   padding: 27rpx 30rpx;
   border-radius: 20rpx;
-  box-shadow: 2px 2px 8px #999999;
-  background: #FFFFCC;
+  box-shadow: 2px 2px 8px #DDDDDD;
+  background: white;
   font-size: 35rpx;
 }
 
@@ -55,6 +55,7 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
+  background: #F5F5F5;
 }
 
 .accepted {

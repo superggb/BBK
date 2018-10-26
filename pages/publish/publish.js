@@ -20,6 +20,7 @@ var s = time.getSeconds();
 
 Page({
   data: {
+    count: 0,
     showTopTips: false,
     addressS: '',
     addressE: '',
@@ -63,6 +64,7 @@ Page({
 
   Handlemessage: function (e) {
     this.setData({
+      count: e.detail.value.length,
       message: e.detail.value
     })
   },

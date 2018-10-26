@@ -11,6 +11,12 @@
   margin-bottom: 20rpx;
   border-radius: 20rpx;
   padding: 25rpx 30rpx;
-  box-shadow: 2px 2px 8px #999999;
+  box-shadow: 2px 2px 8px #DDDDDD;
   background: white;
+}
+
+.order_item_images {
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 5rpx;
 }
