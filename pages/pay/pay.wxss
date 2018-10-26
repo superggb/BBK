@@ -1,0 +1,6 @@
+/* pages/pay/pay.wxss */
+@import '../../libs/weui.wxss';
+
+.wrapper {
+  margin-bottom: 4rem;
+}

@@ -19,7 +19,8 @@
     "pages/publish/publish",
     "pages/orderAll/orderAll",
     "pages/complain/complain",
-    "pages/my/complain/complain"
+    "pages/my/complain/complain",
+    "pages/pay/pay"
   ],
   "window": {
     "backgroundTextStyle": "light",
