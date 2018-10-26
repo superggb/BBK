@@ -126,7 +126,7 @@ Page({
       //   DataSign: dataSign,
       //   DataType: "2"
       // },
-      url: 'http://221h58z433.imwork.net/traceOrder?'+'code='+ename+'&num='+eorder,
+      url: 'https://www.superggb.cn/bbkServer/traceOrder?'+'code='+ename+'&num='+eorder,
       method: 'GET',
       header: {
         'content-type': 'application/x-www-form-urlencoded;charset=utf-8'

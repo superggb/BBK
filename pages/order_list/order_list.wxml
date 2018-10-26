@@ -2,7 +2,7 @@
 
 <wxs module="trim" src="./trim.wxs"></wxs>
 
-<view class="main">
+<view>
   <template name="order_item_temp">
     <view class="order_wrap" id="{{id}}"  bindtap="jumpToDetail">
       <view>

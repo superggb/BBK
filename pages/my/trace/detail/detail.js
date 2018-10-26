@@ -55,7 +55,7 @@ Page({
       //   DataType: "2"
       // },
       // method: 'POST',
-      url: 'http://221h58z433.imwork.net/traceOrder?' + 'code=' + data.ShipperCode + '&num=' + data.LogisticCode,
+      url: 'https://www.superggb.cn/bbkServer/traceOrder?' + 'code=' + data.ShipperCode + '&num=' + data.LogisticCode,
       method:'GET',
       header: {
         'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
