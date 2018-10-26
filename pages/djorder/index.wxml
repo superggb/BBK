@@ -12,7 +12,7 @@
     <scroll-view class='scroll-views' scroll-x="false" scroll-y="true" >
     <view class="list">
     <view wx:for="{{porderDetail}}" wx:for-item="i" wx:key="id">
-      <orderdetail wx:if="{{i.state!=3}}" detail="{{i}}" style="margain-buttom:100px"></orderdetail>
+      <orderdetail wx:if="{{i.state!=3&&i.state!=0}}" detail="{{i}}" style="margain-buttom:100px"></orderdetail>
     </view>
     <view wx:for="{{porderDetail}}" wx:for-item="i" wx:key="id">
       <orderdetail wx:if="{{i.state==3}}" detail="{{i}}" style="margain-buttom:100px"></orderdetail>

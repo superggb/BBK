@@ -96,5 +96,29 @@ Page({
         }
       }
     });
+  },
+  cancel: function () {
+    let id = this.data.order_item_data.id
+    wx.showModal({
+      title: '确认提醒',
+      content: '确定要撤销此订单？',
+      success: function (res) {
+        if (res.confirm) {
+          console.log("ok")
+          wx.request({
+            url: 'https://www.superggb.cn/bbkServer/deleteOrder?id=' + id,
+            success: function (res) {
+              console.log(res.data)
+              wx.navigateBack({})
+
+            }
+          })
+        }
+        else {
+          console.log("cancel")
+        }
+      }
+    })
+
   }
 })

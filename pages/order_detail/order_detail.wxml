@@ -64,5 +64,12 @@
       </a>
     </view>
 
+    <view wx:if="{{order_item_data.puid == skey && order_item_data.state==0}}" class="weui-form-preview__ft">
+      <a bindtap="cancel" 
+        class="weui-form-preview__btn weui-form-preview__btn_primary">
+        撤销订单
+      </a>
+    </view>
+
   </view>
 </view>
