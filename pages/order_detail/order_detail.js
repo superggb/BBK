@@ -40,14 +40,12 @@ Page({
    */
   acceptTask: function() {
     var that = this;
-    this.data.skey = wx.getStorageSync('skey');
-    this.data.phone = wx.getStorageSync('phone');
     //console.log("phone:");
     //console.log(wx.getStorageSync('phone'));
     wx.request({
       url: 'https://www.superggb.cn/bbkServer/order/accept?auid=' + this.data.skey + '&id=' + this.data.order_item_data.id + '&aphone=' + this.data.phone,
       header: {
-        'content-type': 'application/json'
+        'content-type': 'application/json'  
       },
       success(res) {
         console.log(res.data);
@@ -76,6 +74,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.data.skey = wx.getStorageSync('skey');
+    this.data.phone = wx.getStorageSync('phone');
     let order_item = JSON.parse(options.order_item);
     console.log(order_item);
     this.setData({

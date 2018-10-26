@@ -26,18 +26,22 @@
 
   <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
       <!-- 已审核 -->
-      <swiper-item>
-        <scroll-view class="main" wx:for="{{complain_items_data}}" wx:key="id">
-          <view class="container">
-            <template wx:if="{{item.state != 0}}" is="complain_item_temp" data="{{...item}}"/>
+      <swiper-item class="swiper-items">
+        <scroll-view scroll-x="false" scroll-y="true" class="scroll-views">
+          <view class="list">
+            <view class="container">
+              <template wx:if="{{item.state != 0}}" wx:for="{{complain_items_data}}" wx:key="id" is="complain_item_temp" data="{{...item}}"/>
+            </view>
           </view>
       </scroll-view>
       </swiper-item>
       <!-- 待审核 -->
-      <swiper-item>
-        <scroll-view wx:for="{{complain_items_data}}" wx:key="id">
+      <swiper-item class="swiper-items">
+        <scroll-view scroll-x="false" scroll-y="true" class="scroll-views">
+          <view class="list">
           <view class="container">
-            <template wx:if="{{item.state == 0}}" is="complain_item_temp" data="{{...item}}"/>
+            <template  wx:if="{{item.state == 0}}" wx:for="{{complain_items_data}}" wx:key="id" is="complain_item_temp" data="{{...item}}"/>
+          </view>
           </view>
         </scroll-view>
       </swiper-item>

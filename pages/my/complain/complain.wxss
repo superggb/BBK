@@ -5,11 +5,12 @@
   margin-left: 25rpx;
   margin-right: 25rpx;
   margin-top: 20rpx;
+  margin-bottom: 50rpx;
   box-sizing: border-box;
 } 
 
 .complain_wrap {
-  margin-bottom: 10rpx;
+  margin-bottom: 20rpx;
   padding: 27rpx 30rpx;
   border-radius: 20rpx;
   box-shadow: 2px 2px 8px #999999;
@@ -70,4 +71,22 @@
 
 .content {
   margin-top: 18rpx;
+}
+
+.swiper-items {
+  height: 100%;
+}
+
+.scroll-views {
+  height: 100%;
+}
+
+.list {
+  overflow:auto;
+  margin:auto;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
 }
