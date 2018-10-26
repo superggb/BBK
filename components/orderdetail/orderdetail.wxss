@@ -1,1 +1,16 @@
 /* components/orderdetail/orderdetail.wxss */
+
+.container {
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+} 
+
+.order_wrap {
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  padding: 25rpx 30rpx;
+  box-shadow: 2px 2px 8px #999999;
+  background: white;
+}
